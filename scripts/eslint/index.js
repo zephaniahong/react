@@ -72,7 +72,7 @@ function intersect(files, patterns) {
   return [...new Set(intersection)];
 }
 
-async function runESLint({onlyChanged, ...options}) {
+async function runESLinty({onlyChanged, ...options}) {
   if (typeof onlyChanged !== 'boolean') {
     throw new Error('Pass options.onlyChanged as a boolean.');
   }
@@ -85,4 +85,4 @@ async function runESLint({onlyChanged, ...options}) {
   return errorCount === 0 && warningCount === 0;
 }
 
-module.exports = runESLint;
+module.exports = runESLinty;
